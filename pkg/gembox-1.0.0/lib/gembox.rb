@@ -13,7 +13,7 @@ class Gembox
       f.puts "gemhome: #{dir}/usr/bin"
     end
     File.open("#{dir}/.bashrc", "w") do |f|
-      f.puts "PS1=\"gembox:\\w>\""
+      f.puts "PS1=\"gembox:\\w> \""
       f.puts "export PATH=#{dir}/usr/bin:\$PATH"
       f.puts "alias gem='ruby #{dir}/dispatch.rb'"
       f.puts "export GEM_PATH=#{dir}/gems"
