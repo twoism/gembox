@@ -1,26 +1,26 @@
 = gembox
 
-* FIX (url)
+* http://www.halogenandtoast.com
 
 == DESCRIPTION:
 
-FIX (describe your package)
+Gembox allows you to create a sandbox for installing and using gems using an interactive shell. Simple run "gembox create ." and then "gembox shell"
 
 == FEATURES/PROBLEMS:
 
-* FIX (list of features or problems)
+* It's perfect ha ha
 
 == SYNOPSIS:
 
-  FIX (code sample of usage)
+gembox create . && gembox shell
 
 == REQUIREMENTS:
 
-* FIX (list of requirements)
+* rubygems
 
 == INSTALL:
 
-* FIX (sudo gem install, anything else)
+* sudo gem install toastyapps-gembox --source http://gems.github.com
 
 == LICENSE:
 
