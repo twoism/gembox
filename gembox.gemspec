@@ -11,18 +11,7 @@ cert_chain: []
 
 date: 2009-03-19 00:00:00 -04:00
 default_executable: 
-dependencies: 
-- !ruby/object:Gem::Dependency 
-  name: hoe
-  type: :development
-  version_requirement: 
-  version_requirements: !ruby/object:Gem::Requirement 
-    requirements: 
-    - - ">="
-      - !ruby/object:Gem::Version 
-        version: 1.11.0
-    version: 
-description: FIX (describe your package)
+description: Create an interactive shell to use as a sandbox for managing gems
 email: 
 - halogenandtoast@gmail.com
 executables: 
@@ -40,9 +29,8 @@ files:
 - Rakefile
 - bin/gembox
 - lib/gembox.rb
-- test/test_gembox.rb
 has_rdoc: true
-homepage: FIX (url)
+homepage: http://halogenandtast.com
 post_install_message: 
 rdoc_options: 
 - --main
@@ -67,7 +55,5 @@ rubyforge_project: gembox
 rubygems_version: 1.3.1
 signing_key: 
 specification_version: 2
-summary: FIX (describe your package)
-test_files: 
-- test/test_gembox.rb
+summary: Create an interactive shell to use as a sandbox for managing gems
 
