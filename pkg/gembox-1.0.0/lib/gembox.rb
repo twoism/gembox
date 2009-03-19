@@ -10,7 +10,6 @@ class Gembox
     File.open("#{dir}/.gemrc", 'w') do |f|
       f.puts "gempath:"
       f.puts "  - #{dir}/gems"
-      f.puts "gemhome: #{dir}/usr/bin"
     end
     File.open("#{dir}/.bashrc", "w") do |f|
       f.puts "PS1=\"gembox:\\w> \""
@@ -26,7 +25,12 @@ class Gembox
       f.puts "#!/usr/bin/ruby"
       f.puts "args=ARGV"
       f.puts "command=args.shift"
-      f.puts "system(\"gem --config-file #{dir}/.gemrc #\{command\} #\{ARGV.join(' ')\}\")"
+      f.puts "case command"
+      f.puts "when 'install'"
+      f.puts "  system(\"gem --config-file #{dir}/.gemrc #\{command\} --bindir #{dir}/usr/bin #\{ARGV.join(' ')\}\")"
+      f.puts "else"
+      f.puts "  system(\"gem --config-file #{dir}/.gemrc #\{command\} #\{ARGV.join(' ')\}\")"
+      f.puts "end"
     end
   end
   
