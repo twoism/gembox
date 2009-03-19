@@ -26,12 +26,7 @@ class Gembox
       f.puts "#!/usr/bin/ruby"
       f.puts "args=ARGV"
       f.puts "command=args.shift"
-      f.puts "case command"
-      f.puts "when 'install'"
-      f.puts "  system(\"gem --config-file #{dir}/.gemrc #\{command\} #\{ARGV.join(' ')\}\")"
-      f.puts "else"
-      f.puts "  system(\"gem --config-file #{dir}/.gemrc #\{command\} #\{ARGV.join(' ')\}\")"
-      f.puts "end"
+      f.puts "system(\"gem --config-file #{dir}/.gemrc #\{command\} #\{ARGV.join(' ')\}\")"
     end
   end
   
