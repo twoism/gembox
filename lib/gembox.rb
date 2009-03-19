@@ -1,5 +1,11 @@
+require 'yaml'
 class Gembox
   VERSION = '1.0.0'
+  
+  def initialize
+    @cfg_path = "~/.gemboxrc"
+    load_config
+  end
   
   def self.create(args)
     dir = Dir.new(Dir.pwd+"/"+args.shift).path
@@ -37,4 +43,15 @@ class Gembox
   def self.shell(args)
     system("sh shell.bash")
   end
+  
+  #protected
+  
+  def load_config
+    @cfg = load_yaml(@cfg_path)
+  end
+  
+  def load_yaml path
+    File.exists?(path)? YAML.load(path) : nil
+  end
+  
 end
