@@ -1,7 +1,7 @@
 --- !ruby/object:Gem::Specification 
 name: gembox
 version: !ruby/object:Gem::Version 
-  version: 1.0.1
+  version: 1.0.2
 platform: ruby
 authors: 
 - Matthew Mongeau
@@ -11,7 +11,8 @@ cert_chain: []
 
 date: 2009-03-19 00:00:00 -04:00
 default_executable: 
-description: Create an interactive shell to use as a sandbox for managing gems
+dependencies: 
+description: Gembox allows you to create a sandbox for installing and using gems using an interactive shell. Simple run "gembox create ." and then "gembox shell"
 email: 
 - halogenandtoast@gmail.com
 executables: 
@@ -29,8 +30,9 @@ files:
 - Rakefile
 - bin/gembox
 - lib/gembox.rb
+- test/test_gembox.rb
 has_rdoc: true
-homepage: http://halogenandtast.com
+homepage: http://www.halogenandtoast.com
 post_install_message: 
 rdoc_options: 
 - --main
@@ -55,5 +57,7 @@ rubyforge_project: gembox
 rubygems_version: 1.3.1
 signing_key: 
 specification_version: 2
-summary: Create an interactive shell to use as a sandbox for managing gems
+summary: Gembox allows you to create a sandbox for installing and using gems using an interactive shell
+test_files: 
+- test/test_gembox.rb
 
