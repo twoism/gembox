@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+require 'gembox'
+
+if ARGV.length > 0
+  args = ARGV
+  command = args.shift
+  Gembox.send(command, args)
+end
